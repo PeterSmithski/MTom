@@ -13,6 +13,7 @@
 		660AB98F22366A7300CBC465 /* MTom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 660AB98D22366A7300CBC465 /* MTom.xcdatamodeld */; };
 		660AB99122366A7500CBC465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660AB99022366A7500CBC465 /* Assets.xcassets */; };
 		660AB99422366A7500CBC465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660AB99222366A7500CBC465 /* LaunchScreen.storyboard */; };
+		660AB99F2236831400CBC465 /* CustomizableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB99E2236831400CBC465 /* CustomizableSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		660AB99022366A7500CBC465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660AB99322366A7500CBC465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		660AB99522366A7500CBC465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660AB99E2236831400CBC465 /* CustomizableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				660AB98522366A7300CBC465 /* MTom */,
-				660AB98422366A7300CBC465 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,20 +52,47 @@
 				660AB98322366A7300CBC465 /* MTom.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		660AB98522366A7300CBC465 /* MTom */ = {
 			isa = PBXGroup;
 			children = (
-				660AB98622366A7300CBC465 /* AppDelegate.swift */,
-				660AB98822366A7300CBC465 /* ViewController.swift */,
-				660AB98A22366A7300CBC465 /* Main.storyboard */,
-				660AB99022366A7500CBC465 /* Assets.xcassets */,
-				660AB99222366A7500CBC465 /* LaunchScreen.storyboard */,
 				660AB99522366A7500CBC465 /* Info.plist */,
-				660AB98D22366A7300CBC465 /* MTom.xcdatamodeld */,
+				660AB99B22366C9000CBC465 /* Model */,
+				660AB99C22366C9500CBC465 /* View */,
+				660AB99D22366C9A00CBC465 /* Controller */,
+				660AB98422366A7300CBC465 /* Products */,
 			);
 			path = MTom;
+			sourceTree = "<group>";
+		};
+		660AB99B22366C9000CBC465 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				660AB99022366A7500CBC465 /* Assets.xcassets */,
+				660AB98D22366A7300CBC465 /* MTom.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		660AB99C22366C9500CBC465 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660AB99222366A7500CBC465 /* LaunchScreen.storyboard */,
+				660AB98A22366A7300CBC465 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		660AB99D22366C9A00CBC465 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				660AB98622366A7300CBC465 /* AppDelegate.swift */,
+				660AB98822366A7300CBC465 /* ViewController.swift */,
+				660AB99E2236831400CBC465 /* CustomizableSlider.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660AB99F2236831400CBC465 /* CustomizableSlider.swift in Sources */,
 				660AB98922366A7300CBC465 /* ViewController.swift in Sources */,
 				660AB98722366A7300CBC465 /* AppDelegate.swift in Sources */,
 				660AB98F22366A7300CBC465 /* MTom.xcdatamodeld in Sources */,
@@ -296,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.bk-exhaust.MTom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.bk-exhaust.MTom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
