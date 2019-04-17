@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, BluetoothSerialDelegate {
+    
     
     @IBOutlet weak var volumeSlider: CustomizableSlider!
     @IBOutlet weak var balanceSlider: CustomizableSlider!
     
     var receivedVolume: Int = 50
     var receivedBalance: Int = 110
-    var balancePosition: Int = 0
+    var balancePosition: Int = 11
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     @IBAction func volumeDown(_ sender: Any) {
         if(volumeSlider.value > 0){
             volumeSlider.value = volumeSlider.value - 1
+            serial.sendMessageToDevice("V-")
         }
         
     }
@@ -32,32 +34,48 @@ class ViewController: UIViewController {
     @IBAction func volumeUp(_ sender: Any) {
         if(volumeSlider.value < 100){
             volumeSlider.value = volumeSlider.value + 1
+           if(serial.connectedPeripheral != nil){ serial.sendMessageToDevice("V+")}
         }
     }
     
     @IBAction func balanceLeft(_ sender: Any) {
         if(balancePosition > 0){balancePosition -= 1}
         scaleBalancePosition(currentBalance: balancePosition)
+        if(serial.connectedPeripheral != nil){serial.sendMessageToDevice("B-")}
     }
     
     @IBAction func balanceRight(_ sender: Any) {
         if(balancePosition < 22){balancePosition += 1}
         scaleBalancePosition(currentBalance: balancePosition)
+        if(serial.connectedPeripheral != nil){serial.sendMessageToDevice("B+")}
     }
     
     
     @IBAction func togglePower(_ sender: Any) {
+        if(serial.connectedPeripheral != nil){serial.sendMessageToDevice("pp")}
     }
     
     @IBAction func toggleMute(_ sender: Any) {
+        if(serial.connectedPeripheral != nil){serial.sendMessageToDevice("mm")}
     }
     
     @IBAction func disconnectPressed(_ sender: Any) {
+        serial.disconnect()
     }
     
     @IBAction func connectPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToSearch", sender: self)
     }
     
+    func serialDidChangeState() {
+        if serial.centralManager.state != .poweredOn{
+            messageBox(title: "Bluetooth is off", message: "Please turn on bluetooth", btText: "Ok", goToSettings: true)
+        }
+    }
+    
+    func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
+        messageBox(title: "Disconnected", message: "Device has been disconnected", btText: "Ok")
+    }
     
     //Because the provided background image is not symetrical, i have to empirically provide values on exact position
     func scaleBalancePosition(currentBalance: Int){

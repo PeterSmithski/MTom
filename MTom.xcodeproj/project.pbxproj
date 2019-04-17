@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		660AB98722366A7300CBC465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB98622366A7300CBC465 /* AppDelegate.swift */; };
-		660AB98922366A7300CBC465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB98822366A7300CBC465 /* ViewController.swift */; };
+		660AB98922366A7300CBC465 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB98822366A7300CBC465 /* PanelViewController.swift */; };
 		660AB98C22366A7300CBC465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660AB98A22366A7300CBC465 /* Main.storyboard */; };
 		660AB98F22366A7300CBC465 /* MTom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 660AB98D22366A7300CBC465 /* MTom.xcdatamodeld */; };
 		660AB99122366A7500CBC465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660AB99022366A7500CBC465 /* Assets.xcassets */; };
 		660AB99422366A7500CBC465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660AB99222366A7500CBC465 /* LaunchScreen.storyboard */; };
 		660AB99F2236831400CBC465 /* CustomizableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB99E2236831400CBC465 /* CustomizableSlider.swift */; };
+		6618EDE822653D50007FEB89 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618EDE722653D50007FEB89 /* BluetoothSerial.swift */; };
+		6674932322653F290051BACC /* SearchDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6674932222653F290051BACC /* SearchDevicesViewController.swift */; };
+		667493252265446C0051BACC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667493242265446C0051BACC /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		660AB98322366A7300CBC465 /* MTom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660AB98622366A7300CBC465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		660AB98822366A7300CBC465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		660AB98822366A7300CBC465 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		660AB98B22366A7300CBC465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		660AB98E22366A7300CBC465 /* MTom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTom.xcdatamodel; sourceTree = "<group>"; };
 		660AB99022366A7500CBC465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660AB99322366A7500CBC465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		660AB99522366A7500CBC465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660AB99E2236831400CBC465 /* CustomizableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableSlider.swift; sourceTree = "<group>"; };
+		6618EDE722653D50007FEB89 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		6674932222653F290051BACC /* SearchDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDevicesViewController.swift; sourceTree = "<group>"; };
+		667493242265446C0051BACC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +94,12 @@
 		660AB99D22366C9A00CBC465 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6618EDE722653D50007FEB89 /* BluetoothSerial.swift */,
 				660AB98622366A7300CBC465 /* AppDelegate.swift */,
-				660AB98822366A7300CBC465 /* ViewController.swift */,
+				660AB98822366A7300CBC465 /* PanelViewController.swift */,
+				6674932222653F290051BACC /* SearchDevicesViewController.swift */,
 				660AB99E2236831400CBC465 /* CustomizableSlider.swift */,
+				667493242265446C0051BACC /* Utilities.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,10 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6674932322653F290051BACC /* SearchDevicesViewController.swift in Sources */,
 				660AB99F2236831400CBC465 /* CustomizableSlider.swift in Sources */,
-				660AB98922366A7300CBC465 /* ViewController.swift in Sources */,
+				667493252265446C0051BACC /* Utilities.swift in Sources */,
+				660AB98922366A7300CBC465 /* PanelViewController.swift in Sources */,
 				660AB98722366A7300CBC465 /* AppDelegate.swift in Sources */,
 				660AB98F22366A7300CBC465 /* MTom.xcdatamodeld in Sources */,
+				6618EDE822653D50007FEB89 /* BluetoothSerial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
